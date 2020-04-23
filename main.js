@@ -116,13 +116,14 @@ function setPlayer(event) {
 
   form.classList.add("hidden");
   document.getElementById("game-controls").classList.remove("hidden");
+  document.getElementById("current-player-card").classList.remove("hidden");
   draw();
   drawScoreBoard();
 }
 function changePlayer() {
   console.log("called change player function");
   document.getElementById("player-form").classList.remove("hidden");
-  document.getElementById("game").classList.add("hidden");
+  document.getElementById("game-controls").classList.add("hidden");
 }
 function savePlayers() {
   window.localStorage.setItem("players", JSON.stringify(players));
